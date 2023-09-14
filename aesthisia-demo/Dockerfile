@@ -24,4 +24,4 @@ COPY --from=build /app/build /usr/share/nginx/html
 EXPOSE 3000
 
 # Start the application
-CMD ["npm", "start"]
+CMD ["nginx", "-g", "daemon off;"]
