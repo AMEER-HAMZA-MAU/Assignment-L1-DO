@@ -1,10 +1,10 @@
 # Use an official Node.js runtime as a parent image
-FROM node:16-alpine as builder
+FROM node:lts-alpine as build-stage
 
 # Set the working directory to /app
 WORKDIR /app
 
-COPY package.json .
+COPY package.json ./
 
 # Install app dependencies
 RUN npm install
