@@ -12,9 +12,12 @@ RUN npm install
 # Copy the application code to /app
 COPY . .
 
+RUN npm run build
+
 #Stage2
 
 FROM nginx:1.19.0
+WORKDIR  /usr/share/nginx/html
 COPY --from=build /app/build /usr/share/nginx/html 
 
 # Expose the port that the application is listening on
