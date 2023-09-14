@@ -14,7 +14,7 @@ COPY . .
 
 #Stage2
 
-FROM nginx
+FROM nginx:1.19.0
 COPY --from=build /app/build /usr/share/nginx/html 
 
 # Expose the port that the application is listening on
