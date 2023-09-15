@@ -16,7 +16,7 @@ COPY . .
 
 
 # Expose the port that the application is listening on
-EXPOSE 3000
+
 
 # Start the application
 CMD ["npm", "start"]
